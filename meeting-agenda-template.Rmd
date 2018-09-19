@@ -1,12 +1,15 @@
 ---
-title: "Committee Meeting Agenda"
-date: "Date"
+title: "Meeting Agenda Template"
+author: "Xiao Liu"
+date: "2018/9/19"
 output: pdf_document
+urlcolor: blue
 header-includes:
   - \usepackage{pgffor, ifthen}
 ---
 
 \newcommand{\notes}[3][\empty]{%
+  \vspace{#1}
 	\foreach \n in {1,...,#2}{%
 		\ifthenelse{\equal{#1}{\empty}}
 			{\rule{#3}{0.5pt}\\}
@@ -16,24 +19,20 @@ header-includes:
 
 ## Attendees
 
-* Committee member 1
-* Committee member 2
-* Committee member 3
-* Committee member 4
+* Member 1
+* Member 2
 
 ## Outline
 
 ### Follow up
 
-* _Put any follow up from the previous meeting here._
+$\square$ _Put any follow up from the previous meeting here._
 
 ### New developments
 
-* _Summarize the "summary paragraph" you sent out prior to the meeting in a few bullets to discuss._
+We discussed the following next steps.
 
-### Defense timeline
-
-* _Summarize your defense timeline based on the new updates._
+$\square$ _Summarize the "summary paragraph" you sent out prior to the meeting in a few bullets to discuss._
 
 ### Next steps
 
@@ -41,6 +40,6 @@ header-includes:
 
 ## Notes
 
-_This is a space for recording what was discussed in the meeting._
+_This is a space for recording what was discussed in the meeting._  
 
 \notes{10pt}{8}{\textwidth}
